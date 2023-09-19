@@ -14,14 +14,7 @@ import { FormBuscaComponent } from "./form-busca/form-busca.component";
 import { HeaderComponent } from "./header/header.component";
 import { ModalComponent } from "./modal/modal.component";
 import { SeletorPassageiroComponent } from "./seletor-passageiro/seletor-passageiro.component";
-import { PassagemComponent } from "./passagem/passagem.component";
-import { PassagemDestaqueComponent } from "./passagem-destaque/passagem-destaque.component";
 import { MaterialModule } from "../core/material/material.module";
-import { CompanhiasComponent } from "./form-busca/filtros-complementares/companhias/companhias.component";
-import { FiltrosComplementaresComponent } from "./form-busca/filtros-complementares/filtros-complementares.component";
-import { LabelComponent } from "./form-busca/filtros-complementares/label/label.component";
-import { ParadasComponent } from "./form-busca/filtros-complementares/paradas/paradas.component";
-import { PrecosComponent } from "./form-busca/filtros-complementares/precos/precos.component";
 
 @NgModule({
   declarations: [
@@ -37,14 +30,7 @@ import { PrecosComponent } from "./form-busca/filtros-complementares/precos/prec
     HeaderComponent,
     SeletorPassageiroComponent,
     ModalComponent,
-    BotaoControleComponent,
-    PassagemComponent,
-    PassagemDestaqueComponent,
-    ParadasComponent,
-    CompanhiasComponent,
-    PrecosComponent,
-    LabelComponent,
-    FiltrosComplementaresComponent
+    BotaoControleComponent
   ],
   imports: [
     CommonModule,
@@ -64,14 +50,7 @@ import { PrecosComponent } from "./form-busca/filtros-complementares/precos/prec
     HeaderComponent,
     SeletorPassageiroComponent,
     ModalComponent,
-    BotaoControleComponent,
-    PassagemComponent,
-    PassagemDestaqueComponent,
-    ParadasComponent,
-    CompanhiasComponent,
-    PrecosComponent,
-    LabelComponent,
-    FiltrosComplementaresComponent,
+    BotaoControleComponent
   ]
 })
 export class SharedModule { }

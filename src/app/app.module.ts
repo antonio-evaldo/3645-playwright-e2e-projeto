@@ -7,27 +7,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor';
-import { BuscaComponent } from './busca/busca.component';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './core/material/material.module';
-import { HomeModule } from './pages/home/home.module';
+import { HomeModule } from './home/home.module';
 import { AutenticacaoModule } from './autenticacao/autenticacao.module';
+import { BuscaModule } from './busca/busca.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BuscaComponent
   ],
   imports: [
-    SharedModule,
-    MaterialModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    SharedModule,
+    MaterialModule,
     HomeModule,
-    AutenticacaoModule
+    AutenticacaoModule,
+    BuscaModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
