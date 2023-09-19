@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatChipSelectionChange } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from 'src/app/shared/modal/modal.component';
-import { DadosBusca, UnidadeFederativa } from '../types/type';
+import { DadosBusca, UnidadeFederativa } from '../../core/types/type';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class FormBuscaService {
 
   formBusca: FormGroup;
 
-  constructor(private dialog: MatDialog) { 
+  constructor(private dialog: MatDialog) {
     const somenteIda = new FormControl(false, [Validators.required])
     const dataVolta = new FormControl(null, [Validators.required])
 
@@ -50,24 +50,24 @@ export class FormBuscaService {
     if (adultos && adultos > 0) {
       descricao += `${adultos} adulto${adultos > 1 ? 's' : ''}`;
     }
-  
+
     const criancas = this.formBusca.get('criancas')?.value;
     if (criancas && criancas > 0) {
       descricao += `${descricao ? ', ' : ''}${criancas} criança${criancas > 1 ? 's' : ''}`;
     }
-  
+
     const bebes = this.formBusca.get('bebes')?.value;
     if (bebes && bebes > 0) {
       descricao += `${descricao ? ', ' : ''}${bebes} bebê${bebes > 1 ? 's' : ''}`;
     }
-  
+
     return descricao
   }
 
   trocarOrigemDestino(): void {
     const origem = this.formBusca.get('origem')?.value;
     const destino = this.formBusca.get('destino')?.value;
-  
+
     this.formBusca.patchValue({
       origem: destino,
       destino: origem

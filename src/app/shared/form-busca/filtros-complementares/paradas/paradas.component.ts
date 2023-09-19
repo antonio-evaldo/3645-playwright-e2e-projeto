@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { FormBuscaService } from 'src/app/core/services/form-busca.service';
+import { FormBuscaService } from 'src/app/shared/services/form-busca.service';
 
 interface OpcoesDeParada{
   display: string
