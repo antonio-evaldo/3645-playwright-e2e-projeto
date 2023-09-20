@@ -10,8 +10,6 @@ import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './core/material/material.module';
 import { HomeModule } from './home/home.module';
-import { AutenticacaoModule } from './autenticacao/autenticacao.module';
-import { BuscaModule } from './busca/busca.module';
 
 @NgModule({
   declarations: [
@@ -25,9 +23,7 @@ import { BuscaModule } from './busca/busca.module';
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
-    HomeModule,
-    AutenticacaoModule,
-    BuscaModule
+    HomeModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

@@ -15,6 +15,7 @@ import { HeaderComponent } from "./header/header.component";
 import { ModalComponent } from "./modal/modal.component";
 import { SeletorPassageiroComponent } from "./seletor-passageiro/seletor-passageiro.component";
 import { MaterialModule } from "../core/material/material.module";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MaterialModule } from "../core/material/material.module";
   imports: [
     CommonModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     BannerComponent,
