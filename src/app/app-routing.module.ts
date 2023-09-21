@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeModule } from './home/home.module';
 
 const routes: Routes = [
   {
@@ -17,8 +18,8 @@ const routes: Routes = [
   },
   {
     path: '**',
+    redirectTo: '/pagina-nao-encontrada',
     pathMatch: 'full',
-    redirectTo: '/pagina-nao-encontrada'
   }
 ];
 
