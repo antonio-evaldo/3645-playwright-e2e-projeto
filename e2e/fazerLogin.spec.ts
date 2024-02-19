@@ -1,22 +1,20 @@
 import test, { expect } from "@playwright/test";
 
 test.describe('Login', () => {
-  test('Deve conseguir fazer login com email e senha válidos', async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
     await page.goto('/');
     await page.getByTestId('botao-login').click();
     await expect(page).toHaveURL('/auth/login');
-    
+  });
+
+  test('Deve conseguir fazer login com email e senha válidos', async ({ page }) => {    
     await page.getByTestId('input-email').fill('antonio.evaldo@alura.com');
     await page.getByTestId('input-senha').fill('123456');
     await page.getByTestId('botao-acessar-conta').click();
     await expect(page).toHaveURL('/home');
   });
 
-  test('Não deve conseguir fazer login com email inválido', async ({ page }) => {
-    await page.goto('/');
-    await page.getByTestId('botao-login').click();
-    await expect(page).toHaveURL('/auth/login');
-    
+  test('Não deve conseguir fazer login com email inválido', async ({ page }) => {    
     await page.getByTestId('input-email').fill('antonio.evaldo@errado.com');
     await page.getByTestId('input-senha').fill('123456');
     await page.getByTestId('botao-acessar-conta').click();
