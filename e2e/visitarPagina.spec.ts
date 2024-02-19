@@ -6,7 +6,6 @@ test.describe("Página inicial", () => {
     await expect(page).toHaveTitle("Jornada Milhas");
 
     const tituloPassagens = page.getByRole('heading', { name: 'Passagens' });
-    
     await expect(tituloPassagens).toBeVisible();
   });
 });
