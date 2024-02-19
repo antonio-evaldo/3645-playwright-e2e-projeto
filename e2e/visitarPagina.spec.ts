@@ -6,7 +6,11 @@ test.describe("Página inicial", () => {
     await expect(page).toHaveTitle("Jornada Milhas");
 
     const tituloPassagens = page.getByRole('heading', { name: 'Passagens' });
+    const tituloPromocoes = page.getByRole('heading', { name: 'Promoções' });
+    const tituloDepoimentos = page.getByRole('heading', { name: 'Depoimentos' });
     
     await expect(tituloPassagens).toBeVisible();
+    await expect(tituloPromocoes).toBeVisible();
+    await expect(tituloDepoimentos).toBeVisible();
   });
 });
