@@ -30,7 +30,7 @@ test.describe('Buscar Passagens', () => {
 
     const dropdownDestino = page
       .getByTestId('campo-dropdown-destino')
-      .getByPlaceholder('Destino');
+      .getByLabel('Destino');
     await dropdownDestino.fill('rio de janeiro');
     await dropdownDestino.press('Enter');
 
